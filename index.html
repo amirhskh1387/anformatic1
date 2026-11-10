@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="فروشگاه آنلاین سازها و تجهیزات موسیقی">
+    <title>MusicShop | فروشگاه موسیقی</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="website">
+
+        <header class="header">
+
+            <a href="#" class="logo">MusicShop</a>
+
+            <nav class="navigation">
+                <a href="homepage.html" class="nav-link active">خانه</a>
+                <a href="products.html" class="nav-link">محصولات</a>
+                <a href="brand.html" class="nav-link">برندها</a>
+                <a href="education.html" class="nav-link">آموزش</a>
+                <a href="about.html" class="nav-link">درباره ما</a>
+                <a href="contact.html" class="nav-link">تماس</a>
+            </nav>
+
+            <div class="header-actions">
+
+                <div class="search-box">
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="جستجو..."
+                        autocomplete="off"
+                    >
+                    <span class="search-icon">⌕</span>
+                </div>
+
+                <div class="profile-wrapper">
+
+                    <button
+                        class="profile-button"
+                        id="profileButton"
+                        aria-expanded="false"
+                        aria-label="حساب کاربری"
+                    >
+                        <svg viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="1.8"
+                             stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M4 21a8 8 0 0 1 16 0"/>
+                        </svg>
+                        <span>پروفایل</span>
+                    </button>
+
+                    <div class="profile-dropdown" id="profileDropdown">
+
+                        <div class="dropdown-heading">
+                            حساب کاربری
+                        </div>
+
+                        <button class="dropdown-item" id="loginButton">
+                            <span class="dropdown-icon">↪</span>
+                            <span>
+                                Login
+                                <small>ورود به حساب کاربری</small>
+                            </span>
+                        </button>
+
+                        <button class="dropdown-item" id="signupButton">
+                            <span class="dropdown-icon">＋</span>
+                            <span>
+                                Sign Up
+                                <small>ایجاد حساب جدید</small>
+                            </span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <button class="cart-button" id="cartButton">
+                    <span>سبد خرید</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <section class="hero">
+
+            <h1>بهترین سازها و تجهیزات موسیقی</h1>
+
+            <p>
+                با تضمین اصالت کالا و ارسال سریع به سراسر ایران
+            </p>
+
+            <a href="products.html" class="hero-button">
+                مشاهده محصولات
+            </a>
+
+        </section>
+
+
+        <section class="categories-section" id="categories">
+
+            <div class="section-heading">
+                <h2>دسته‌بندی‌های محبوب</h2>
+                <a href="products.html" class="reset-filter">
+                 مشاهده همه 
+            </a>
+            </div>
+
+            <div class="categories">
+
+                <button class="category-card" data-category="گیتار">
+                    <span class="category-name guitar">گیتار</span>
+                    <span class="category-description">
+                        الکتریک • آکوستیک • کلاسیک
+                    </span>
+                </button>
+
+                <button class="category-card" data-category="کیبورد">
+                    <span class="category-name keyboard">کیبورد و پیانو</span>
+                    <span class="category-description">
+                        دیجیتال • آکوستیک
+                    </span>
+                </button>
+
+                <button class="category-card" data-category="استودیو">
+                    <span class="category-name studio">تجهیزات استودیو</span>
+                    <span class="category-description">
+                        میکروفون • کارت صدا
+                    </span>
+                </button>
+
+                <button class="category-card" data-category="درام">
+                    <span class="category-name drums">درام و پرکاشن</span>
+                    <span class="category-description">
+                        الکترونیک • آکوستیک
+                    </span>
+                </button>
+
+                <button class="category-card" data-category="لوازم جانبی">
+                    <span class="category-name accessories">لوازم جانبی</span>
+                    <span class="category-description">
+                        کابل • استند • کیف
+                    </span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="featured-section" id="featured">
+
+            <div class="section-heading">
+                <h2>محصولات ویژه</h2>
+                <span class="product-subtitle">انتخابی از بهترین محصولات</span>
+            </div>
+
+            <div class="products" id="productsContainer">
+
+                <!-- PRODUCT 1 -->
+                <article class="product-card" data-category="گیتار">
+
+                    <div class="product-image">
+                        <span>تصویر محصول</span>
+                    </div>
+
+                    <div class="product-info">
+                        <h3>گیتار Fender Stratocaster</h3>
+                        <p>برند: Sunburst</p>
+                        <strong>۱۸,۵۰۰,۰۰۰ تومان</strong>
+
+                        <button class="add-cart" data-product="Fender Stratocaster">
+                            افزودن به سبد
+                        </button>
+                    </div>
+
+                </article>
+
+
+                <article class="product-card" data-category="کیبورد">
+
+                    <div class="product-image">
+                        <span>تصویر محصول</span>
+                    </div>
+
+                    <div class="product-info">
+                        <h3>پیانو Yamaha PSR-E373</h3>
+                        <p>رنگ: مشکی • اورجینال</p>
+                        <strong>۱۲,۹۰۰,۰۰۰ تومان</strong>
+
+                        <button class="add-cart" data-product="Yamaha PSR-E373">
+                            افزودن به سبد
+                        </button>
+                    </div>
+
+                </article>
+
+
+                <article class="product-card" data-category="استودیو">
+
+                    <div class="product-image">
+                        <span>تصویر محصول</span>
+                    </div>
+
+                    <div class="product-info">
+                        <h3>میکروفون Shure SM58</h3>
+                        <p>دینامیک • حرفه‌ای</p>
+                        <strong>۳,۲۰۰,۰۰۰ تومان</strong>
+
+                        <button class="add-cart" data-product="Shure SM58">
+                            افزودن به سبد
+                        </button>
+                    </div>
+
+                </article>
+
+
+                <article class="product-card" data-category="استودیو">
+
+                    <div class="product-image">
+                        <span>تصویر محصول</span>
+                    </div>
+
+                    <div class="product-info">
+                        <h3>کارت صدا Focusrite</h3>
+                        <p>Scarlett 2i2 (3rd Gen)</p>
+                        <strong>۸,۷۰۰,۰۰۰ تومان</strong>
+
+                        <button class="add-cart" data-product="Focusrite Scarlett 2i2">
+                            افزودن به سبد
+                        </button>
+                    </div>
+
+                </article>
+
+            </div>
+
+            <div class="empty-message" id="emptyMessage">
+                محصولی با این مشخصات پیدا نشد
+            </div>
+
+        </section>
+
+
+        <footer class="footer" id="footer">
+
+            <p>
+                سایت ما: تضمین اصالت کالا، ضمانت معتبر و پشتیبانی سفارش‌های خرید
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <div class="modal-overlay" id="authModal">
+
+        <div class="auth-modal">
+
+            <button class="modal-close" id="modalClose" aria-label="بستن">
+                ×
+            </button>
+
+            <div class="modal-logo">MusicShop</div>
+
+            <h2 id="modalTitle">ورود به حساب کاربری</h2>
+
+            <p class="modal-description" id="modalDescription">
+                برای ادامه وارد حساب کاربری خود شوید
+            </p>
+
+            <form id="authForm">
+
+                <div class="form-group" id="nameGroup" hidden>
+                    <label for="fullName">نام و نام خانوادگی</label>
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="نام خود را وارد کنید"
+                        autocomplete="name"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">ایمیل</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="example@email.com"
+                        required
+                        autocomplete="email"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">رمز عبور</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="رمز عبور خود را وارد کنید"
+                        required
+                        minlength="6"
+                        autocomplete="current-password"
+                    >
+                </div>
+
+                <button type="submit" class="auth-submit" id="authSubmit">
+                    ورود
+                </button>
+
+            </form>
+
+            <p class="auth-switch">
+                <span id="switchText">حساب کاربری ندارید؟</span>
+                <button id="switchAuth">ثبت نام کنید</button>
+            </p>
+
+            <p class="auth-notice" id="authNotice">
+                این فرم نمایشی است و برای ورود واقعی به سرور نیاز دارد
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="homepage.js"></script>
+
+</body>
+</html>
